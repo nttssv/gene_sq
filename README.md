@@ -4,34 +4,68 @@ This repository contains tools for analyzing and comparing gene sequences from g
 
 ## Example Input
 
-Input is a gel electrophoresis image (JPG/PNG) showing DNA bands, for example:
+Input is a gel electrophoresis image (JPG/PNG) showing DNA bands. The repository includes an example input file `input1.jpeg` (1600x739 pixels, JPEG format) containing 11 samples.
+
+### Input File Specification:
+- **Format**: JPEG (JFIF standard)
+- **Resolution**: 1600 x 739 pixels
+- **Color**: RGB
+- **Samples**: 11 lanes
+
+### Input Visualization:
 
 ```
-[Gel Image]
-1  2  3  4  5  6  7  8  9 10 11
-|  |  |  |  |  |  |  |  |  |  |
-|  |  |  |  |  |  |  |  |  |  |
-|  |  |  |  |  |  |  |  |  |  |
-|  |  |  |  |  |  |  |  |  |  |
-|  |  |  |  |  |  |  |  |  |  |
+1   2   3   4   5   6   7   8   9   10  11  ← Sample Numbers
+│   │   │   │   │   │   │   │   │   │   │
+│   │   │   │   │   │   │   │   │   │   │
+│   │   │   │   │   │   │   │   │   │   │
+│   │   │   │   │   │   │   │   │   │   │
+└───┴───┴───┴───┴───┴───┴───┴───┴───┴───┘
 ```
 
-## Example Output
+### Expected Input Format:
+- Clear, well-lit image of the gel
+- Lanes should be roughly vertical
+- Bands should be clearly visible
+- Include a ladder/marker lane if available for size reference
 
-1. **Visual Output**:
-   - Original gel image with detected lanes
-   - Similarity matrix heatmap
+## Analysis Results
 
-2. **Textual Output**:
+### Visual Output
+
+![Gel Analysis Results](gel_analysis.png)
+
+### Detailed Analysis
+
+1. **Sample Similarity**:
+   - Samples 4-10 show high similarity (low distance values)
+   - Sample 11 is significantly different from all others
+   - Samples 1-3 show moderate similarity to each other
+
+2. **Key Observations**:
+   - **Sample 11** is an outlier (average distance > 1.0 from all others)
+   - **Samples 7-10** form the most similar group (distance < 0.1 between them)
+   - **Samples 1-3** form a separate cluster with distinct band patterns
+
+3. **Similarity Matrix** (lower values = more similar):
    ```
-   Analysis complete! Results saved to gel_analysis.png
-
-   Similarity Matrix (lower values = more similar):
    [[0.   0.26 0.24 0.11 0.11 0.17 0.24 0.24 0.27 0.29 0.97]
     [0.26 0.   0.07 0.09 0.12 0.1  0.11 0.11 0.11 0.12 1.01]
-    ...
+    [0.24 0.07 0.   0.08 0.14 0.12 0.15 0.15 0.16 0.2  1.  ]
+    [0.11 0.09 0.08 0.   0.02 0.04 0.09 0.1  0.11 0.16 1.02]
+    [0.11 0.12 0.14 0.02 0.   0.02 0.07 0.09 0.12 0.17 0.99]
+    [0.17 0.1  0.12 0.04 0.02 0.   0.03 0.05 0.07 0.12 1.05]
+    [0.24 0.11 0.15 0.09 0.07 0.03 0.   0.01 0.04 0.09 1.07]
+    [0.24 0.11 0.15 0.1  0.09 0.05 0.01 0.   0.02 0.08 1.08]
+    [0.27 0.11 0.16 0.11 0.12 0.07 0.04 0.02 0.   0.07 1.14]
+    [0.29 0.12 0.2  0.16 0.17 0.12 0.09 0.08 0.07 0.   1.1 ]
     [0.97 1.01 1.   1.02 0.99 1.05 1.07 1.08 1.14 1.1  0.  ]]
    ```
+
+4. **Interpretation**:
+   - Distances < 0.1 indicate very similar banding patterns
+   - Distances > 0.2 indicate distinct patterns
+   - Sample 11 shows significant differences from all other samples
 
 ## Features
 
