@@ -32,12 +32,13 @@ ENV/
 *.swo
 
 # Data files
-*.jpeg
+# Allow specific image files
+!input1.jpeg
+!gel_analysis.png
+
+# Ignore other image files
 *.jpg
+*.jpeg
 *.png
 *.csv
 *.xlsx
-
-# Output files
-gel_analysis.png
-sequence_comparison.png

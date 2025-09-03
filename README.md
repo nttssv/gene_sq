@@ -2,9 +2,15 @@
 
 This repository contains tools for analyzing and comparing gene sequences from gel electrophoresis images.
 
-## Example Input
+## Example Input/Output
 
-Input is a gel electrophoresis image (JPG/PNG) showing DNA bands. The repository includes an example input file `input1.jpeg` (1600x739 pixels, JPEG format) containing 11 samples.
+### Input Image
+![Input Gel Image](input1.jpeg)
+*Figure 1: Input gel electrophoresis image with 11 samples*
+
+### Output Analysis
+![Gel Analysis Results](gel_analysis.png)
+*Figure 2: Analysis results showing lane detection and similarity matrix*
 
 ### Input File Specification:
 - **Format**: JPEG (JFIF standard)
@@ -12,7 +18,7 @@ Input is a gel electrophoresis image (JPG/PNG) showing DNA bands. The repository
 - **Color**: RGB
 - **Samples**: 11 lanes
 
-### Input Visualization:
+### Lane Visualization:
 
 ```
 1   2   3   4   5   6   7   8   9   10  11  ← Sample Numbers
