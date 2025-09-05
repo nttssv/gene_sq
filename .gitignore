@@ -35,6 +35,10 @@ ENV/
 # Allow specific image files
 !input1.jpeg
 !gel_analysis.png
+!gel_analysis_enhanced.png
+!gel_original_with_boundaries.png
+!gel_processed_with_bands.png
+!gel_similarity_matrix.png
 
 # Ignore other image files
 *.jpg
