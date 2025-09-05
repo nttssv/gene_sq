@@ -1,0 +1,55 @@
+================================================================================
+GEL ELECTROPHORESIS ANALYSIS REPORT
+================================================================================
+
+ANALYSIS COMPARISON (No Preprocessing vs With Preprocessing):
+------------------------------------------------------------
+
+Key Differences:
+• Total bands detected: 136 bands (vs 154 with preprocessing)
+• Average bands per sample: 10.5 (vs 11.8 with preprocessing)
+• Sample 1: 8 bands detected (vs 13 with preprocessing)
+• Sample numbers detected: 4 (vs 0 with preprocessing)
+
+Band Detection Results:
+Sample  1:  8 bands
+Sample  2:  8 bands
+Sample  3: 18 bands (highest count)
+Sample  4:  9 bands
+Sample  5: 10 bands
+Sample  6:  9 bands
+Sample  7: 12 bands
+Sample  8: 12 bands
+Sample  9: 12 bands
+Sample 10:  6 bands
+Sample 11:  9 bands
+Sample 12:  8 bands
+Sample 13: 15 bands
+
+What This Means:
+[OK] Detected more sample numbers (4 vs 0)
+[!]  Found fewer total bands (136 vs 154)
+[!]  Missed bands in Sample 1 completely
+[OK] Still identified similar sample patterns
+
+Analysis region: Y ≥ 170
+
+================================================================================
+SIMILARITY ANALYSIS
+================================================================================
+
+Most similar pairs (distance < 0.3):
+----------------------------------------
+Samples 11-12: 0.889 similarity (0.111 distance)
+Samples 7-8: 0.833 similarity (0.167 distance)
+Samples 4-11: 0.778 similarity (0.222 distance)
+Samples 6-11: 0.778 similarity (0.222 distance)
+Samples 4-12: 0.778 similarity (0.222 distance)
+Samples 6-12: 0.778 similarity (0.222 distance)
+Samples 1-2: 0.750 similarity (0.250 distance)
+Samples 5-6: 0.700 similarity (0.300 distance)
+Samples 5-12: 0.700 similarity (0.300 distance)
+
+================================================================================
+END OF REPORT
+================================================================================

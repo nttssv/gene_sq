@@ -1,2 +1,7 @@
 biopython>=1.81
+bionumpy
+opencv-python
+matplotlib
+scipy
+pytesseract>=3.7.0
 matplotlib>=3.7.0
